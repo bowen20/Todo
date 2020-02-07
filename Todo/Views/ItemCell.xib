@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="162" id="KGk-i7-Jjw" customClass="ItemCell" customModule="Todo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="162"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="162"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-sM-ghU">
+                        <rect key="frame" x="10" y="10" width="419" height="142"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pI-fO-ESj">
+                                <rect key="frame" x="0.0" y="51" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="kie-3H-8xf"/>
+                                    <constraint firstAttribute="height" constant="40" id="m9H-1A-0Dw"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="square" catalog="system"/>
+                                <connections>
+                                    <action selector="checkBoxPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="REj-Ia-tsB"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfg-bC-G4R">
+                                <rect key="frame" x="50" y="10" width="299" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFd-sW-2oU">
+                                        <rect key="frame" x="10" y="10" width="279" height="102"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HFd-sW-2oU" firstAttribute="top" secondItem="rfg-bC-G4R" secondAttribute="top" constant="10" id="9Ch-ms-Qua"/>
+                                    <constraint firstAttribute="bottom" secondItem="HFd-sW-2oU" secondAttribute="bottom" constant="10" id="Jih-U1-TSA"/>
+                                    <constraint firstItem="HFd-sW-2oU" firstAttribute="leading" secondItem="rfg-bC-G4R" secondAttribute="leading" constant="10" id="hgA-63-3rO"/>
+                                    <constraint firstAttribute="trailing" secondItem="HFd-sW-2oU" secondAttribute="trailing" constant="10" id="tTf-mE-KqK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-cd-API">
+                                <rect key="frame" x="379" y="51" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UNg-Gl-2dI"/>
+                                    <constraint firstAttribute="height" constant="40" id="dtQ-Lv-6rq"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="starPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aby-Uz-VYb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rfg-bC-G4R" firstAttribute="top" secondItem="dc6-sM-ghU" secondAttribute="top" constant="10" id="HQ5-Im-fqE"/>
+                            <constraint firstItem="UXs-cd-API" firstAttribute="leading" secondItem="rfg-bC-G4R" secondAttribute="trailing" constant="10" id="b3f-JE-RLU"/>
+                            <constraint firstAttribute="bottom" secondItem="rfg-bC-G4R" secondAttribute="bottom" constant="10" id="eSX-16-AGN"/>
+                            <constraint firstItem="rfg-bC-G4R" firstAttribute="leading" secondItem="6pI-fO-ESj" secondAttribute="trailing" constant="10" id="gdM-dr-ocr"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dc6-sM-ghU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2C4-rj-frB"/>
+                    <constraint firstAttribute="bottom" secondItem="dc6-sM-ghU" secondAttribute="bottom" constant="10" id="KW2-lg-Uf8"/>
+                    <constraint firstAttribute="trailing" secondItem="dc6-sM-ghU" secondAttribute="trailing" constant="10" id="YHY-c5-fpU"/>
+                    <constraint firstItem="dc6-sM-ghU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="twv-V7-ZNo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bubble" destination="rfg-bC-G4R" id="0fn-PB-Vu3"/>
+                <outlet property="checkBox" destination="6pI-fO-ESj" id="nuh-dQ-vJs"/>
+                <outlet property="descriptionLabel" destination="HFd-sW-2oU" id="5nd-7Y-cbt"/>
+                <outlet property="star" destination="UXs-cd-API" id="nT7-Ab-tJo"/>
+            </connections>
+            <point key="canvasLocation" x="-193.47826086956522" y="160.04464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" catalog="system" width="64" height="56"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
